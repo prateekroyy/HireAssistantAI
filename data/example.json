@@ -1,0 +1,92 @@
+{
+  "profile_url": "https://www.linkedin.com/in/jane-doe-123456789/",
+  "name": "Jane Doe",
+  "headline": "Senior AI Engineer | Passionate about Machine Learning & Natural Language Processing",
+  "location": "San Francisco Bay Area, California, United States",
+  "current_position": {
+    "title": "Senior AI Engineer",
+    "company": "TechInnovate Inc.",
+    "company_url": "https://www.linkedin.com/company/techinnovate-inc/",
+    "start_date": "January 2022",
+    "duration": "2 years 6 months"
+  },
+  "about": "Experienced AI Engineer with 7+ years in developing and deploying scalable machine learning solutions. Specializing in NLP, computer vision, and predictive analytics. Proven ability to lead cross-functional teams and drive innovation in product development. Always eager to learn new technologies and contribute to cutting-edge projects.",
+  "experience": [
+    {
+      "title": "Senior AI Engineer",
+      "company": "TechInnovate Inc.",
+      "company_url": "https://www.linkedin.com/company/techinnovate-inc/",
+      "location": "San Francisco, CA",
+      "start_date": "January 2022",
+      "end_date": "Present",
+      "duration": "2 years 6 months",
+      "description": "Led the development of a new sentiment analysis model (BERT-based) improving accuracy by 15%. Mentored junior engineers and contributed to architectural design for scalable AI services."
+    },
+    {
+      "title": "Machine Learning Engineer",
+      "company": "DataInsights Solutions",
+      "company_url": "https://www.linkedin.com/company/datainsights-solutions/",
+      "location": "Palo Alto, CA",
+      "start_date": "June 2018",
+      "end_date": "December 2021",
+      "duration": "3 years 7 months",
+      "description": "Developed and maintained predictive models for customer churn reduction. Implemented data pipelines using Apache Spark and deployed models via Flask APIs."
+    },
+    {
+      "title": "Junior Data Scientist",
+      "company": "AnalyticsPro",
+      "company_url": "https://www.linkedin.com/company/analyticspro/",
+      "location": "New York, NY",
+      "start_date": "August 2016",
+      "end_date": "May 2018",
+      "duration": "1 year 10 months",
+      "description": "Assisted senior data scientists in data cleaning, exploratory data analysis, and report generation. Built dashboards using Tableau."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science (M.Sc.)",
+      "field_of_study": "Artificial Intelligence",
+      "university": "Stanford University",
+      "start_date": "September 2015",
+      "end_date": "June 2016"
+    },
+    {
+      "degree": "Bachelor of Science (B.Sc.)",
+      "field_of_study": "Computer Science",
+      "university": "University of California, Berkeley",
+      "start_date": "September 2011",
+      "end_date": "May 2015"
+    }
+  ],
+  "skills": [
+    "Machine Learning",
+    "Natural Language Processing (NLP)",
+    "Deep Learning",
+    "Python",
+    "TensorFlow",
+    "PyTorch",
+    "AWS",
+    "Azure",
+    "Data Science",
+    "Predictive Modeling",
+    "Apache Spark",
+    "Scikit-learn",
+    "Computer Vision",
+    "SQL",
+    "Git"
+  ],
+  "licenses_and_certifications": [
+    {
+      "name": "AWS Certified Machine Learning - Specialty",
+      "issuing_organization": "Amazon Web Services (AWS)",
+      "issue_date": "May 2020"
+    }
+  ],
+  "interests": [
+    "Artificial Intelligence",
+    "Space Exploration",
+    "Photography",
+    "Hiking"
+  ]
+}
