@@ -1,38 +1,53 @@
 from langchain_groq import ChatGroq
 from models.structures import emailstructure
-from models.flowstate import flowState
+from models.flowstate import flowstate
 from dotenv import load_dotenv
 load_dotenv()
 
 model = ChatGroq(model="llama-3.3-70b-versatile")
 structured_emailwriter = model.with_structured_output(emailstructure)
 
-def writer(state=flowState) -> dict:
-    evaluateddata = state['evaluateddata']
+def email_writer(state: flowstate) -> dict:
+    # Convert Pydantic models to dicts
+    resume = state["parsed_resume"]
+    if hasattr(resume, "model_dump"):
+        resume = resume.model_dump()
+    
+    jd = state["parsed_jd"]
+    if hasattr(jd, "model_dump"):
+        jd = jd.model_dump()
+
     prompt = f"""
-You are a professional email writer at "Techmax India PVT. LTD". Generate a personalized interview invitation email in your company for a person based on the following information:
+You are an HR assistant generating a professional interview invitation email.
 
-- Name: {evaluateddata['name']}
-- Email: {evaluateddata['email']}
-- Company the person is currently working at: {evaluateddata['company']}
-- Role: {evaluateddata['role']}
-- Years of Experience: {evaluateddata['experience_years']}
+Candidate Information:
+- Name: {resume['name']}
+- Current Company: {resume['company']}
+- Current Role: {resume['role']}
+- Experience: {resume['experience_years']} years
 
-Requirements:
-1. Use a polite, professional, and friendly tone.
-2. Address the person by name.
-3. Mention their current role, company, and experience to make the email personalized.
-4. Clearly state that the purpose of the email is to invite them for an interview.
-5. Include details about the interview (time, date, mode, or mention that these can be scheduled).
-6. Encourage them to respond to confirm or suggest an alternative.
-7. End with a professional closing and your name/contact information.
+Job Information:
+- Job Title: {jd.get('job_title')}
+- Company: {jd.get('company')}
+- Location: {jd.get('location')}
+- Required Experience: {jd.get('experience_required')}
+- Required Skills: {', '.join(jd.get('skills_required', []))}
+- Education: {jd.get('education', 'Not specified')}
+- Employment Type: {jd.get('employment_type', 'Not specified')}
+- Salary Range: {jd.get('salary_range', 'Not specified')}
 
-Structure to follow:
-- Greeting using their name
-- Acknowledge their experience and current role
-- Invitation to interview with scheduling details
-- Call-to-action for confirmation
-- Closing
+Instructions:
+1. Write a polite and professional email inviting the candidate for an interview.
+2. Include the candidate’s name in the greeting.
+3. Mention the job title and company in the email body.
+4. Suggest possible next steps (e.g., interview schedule or contact for coordination).
+5. Keep the email concise and friendly.
+
+Output the email in JSON format with fields:
+- subject
+- body
 """
-    email = structured_emailwriter.invoke(prompt)
-    return {'email': email.model_dump()}
+    email_output = structured_emailwriter.invoke(prompt)
+
+    # Must return this exact key
+    return {"email": email_output.model_dump()}
