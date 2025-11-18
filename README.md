@@ -12,9 +12,10 @@ AI-powered recruitment automation — resume parsing, JD analysis, and personali
 </p>
 
 <p align="left">
-  <img src="https://img.shields.io/github/stars/prateekroyy/HireAssistantAI?style=social" />
-  <img src="https://img.shields.io/github/forks/prateekroyy/HireAssistantAI?style=social" />
+  <img src="https://img.shields.io/github/stars/prateekroyy/HireAssistantAI?style=social&v=1" />
+  <img src="https://img.shields.io/github/forks/prateekroyy/HireAssistantAI?style=social&v=1" />
 </p>
+
 
 
 HireAssistantAI is a modular, LangGraph-driven workflow system that extracts structured information from resumes and job descriptions and automatically generates professional interview invitation emails using Groq LLaMA 3.3 70B.
