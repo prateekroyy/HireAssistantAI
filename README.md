@@ -1,22 +1,8 @@
-🚀 HireAssistantAI
+HireAssistantAI
 
 AI-powered recruitment automation — resume parsing, JD analysis, and personalized email generation.
 
-<p align="left">
-  <img src="https://img.shields.io/badge/Python-3.10+-blue" />
-  <img src="https://img.shields.io/badge/LangGraph-Workflow-orange" />
-  <img src="https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3%2070B-brightgreen" />
-  <img src="https://img.shields.io/badge/Status-Active-success" />
-  <img src="https://img.shields.io/badge/License-MIT-blue" />
-  <img src="https://img.shields.io/badge/PRs-Welcome-purple" />
-</p>
-
-<p align="left">
-  <img src="https://img.shields.io/github/stars/prateekroyy/HireAssistantAI?style=social&v=1" />
-  <img src="https://img.shields.io/github/forks/prateekroyy/HireAssistantAI?style=social&v=1" />
-</p>
-
-
+<p align="left"> <img src="https://img.shields.io/badge/Python-3.10+-blue" /> <img src="https://img.shields.io/badge/LangGraph-Workflow-orange" /> <img src="https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3%2070B-brightgreen" /> <img src="https://img.shields.io/badge/Status-Active-success" /> <img src="https://img.shields.io/badge/License-MIT-blue" /> <img src="https://img.shields.io/badge/PRs-Welcome-purple" /> </p> <p align="left"> <img src="https://img.shields.io/github/stars/prateekroyy/HireAssistantAI?style=social&v=1" /> <img src="https://img.shields.io/github/forks/prateekroyy/HireAssistantAI?style=social&v=1" /> </p>
 
 HireAssistantAI is a modular, LangGraph-driven workflow system that extracts structured information from resumes and job descriptions and automatically generates professional interview invitation emails using Groq LLaMA 3.3 70B.
 
@@ -105,7 +91,7 @@ HIREASSISTANTAI/
 
 🔧 Installation
 1️⃣ Clone the Repository
-git clone https://github.com/<your-username>/HireAssistantAI.git
+git clone https://github.com/prateekroyy/HireAssistantAI.git
 cd HireAssistantAI
 
 2️⃣ Install Dependencies
